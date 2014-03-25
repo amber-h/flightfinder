@@ -35,7 +35,7 @@ group :doc do
 end
 
 gem 'rails_12factor', group: :production
-
+gem 'bootstrap-sass', '>= 3.0.0.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
