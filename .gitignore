@@ -14,3 +14,12 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+*/.DS_Store
+.*
+.rspec
+/.bundle
+/vendor/bundle
+/log/*
+
+/config/application.yml
