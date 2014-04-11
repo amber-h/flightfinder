@@ -22,8 +22,10 @@
    <div ng-controller="LearninglogsController">
       <ul>
         <li ng-repeat="learninglog in learninglogs">
-          <h3>{{learninglog}}</h3>
+          <h3>{{learninglog.content}}</h3>
         </li>
       </ul>
-     </div>
+
+      <h3>{{message}}</h3>
+   </div>
 
