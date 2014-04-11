@@ -1,6 +1,7 @@
 class LearninglogsController < ApplicationController
 
   def index
+    byebug
     render json: Learninglog.all
   end
 

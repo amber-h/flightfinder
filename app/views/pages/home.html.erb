@@ -2,12 +2,28 @@
 
 <% provide(:jumbotron, '
     <h1>Hello, world!</h1>
-    <p>WOWOW cool, using rails + bootstrap to build an awesome fun flight finder</p>
+    <p>WOWOW cool, using rails + bootstrap to build an awesome learning log for junior consultants to track progress!</p>
     <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
 '.html_safe)%>
-         <div>
-           <label>Name:</label>
-           <input type="text" ng-model="yourName" placeholder="Enter a name here">
-           <hr>
-           <h1>Hello {{yourName}}!</h1>
-         </div>
+
+   <div class="input-group input-group-lg">
+     <span class="input-group-addon">Learnings &nbsp;&nbsp;&nbsp;&nbsp; </span>
+
+     <input type="text" class="form-control" ng-model="yourName" placeholder="What did you learn?">
+   </div>
+   <p>Something awesome you learnt this week:</br> {{yourName}}</p>
+
+   <div class="input-group input-group-lg">
+     <span class="input-group-addon">Contributions</span>
+     <input type="text" class="form-control" ng-model="yourContribution" placeholder="What did you contribute this week??">
+   </div>
+   <p>Something awesome you contributed this week:</br> {{yourContribution}}</p>
+
+   <div ng-controller="LearninglogsController">
+      <ul>
+        <li ng-repeat="learninglog in learninglogs">
+          <h3>{{learninglog}}</h3>
+        </li>
+      </ul>
+     </div>
+

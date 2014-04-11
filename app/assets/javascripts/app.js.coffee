@@ -1,1 +1,1 @@
-Window.App = angular.module('LearningLogs', ['ngResource'])
+window.App = angular.module('LearningLogs', ['ngResource'])
