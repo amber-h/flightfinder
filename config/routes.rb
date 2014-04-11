@@ -5,6 +5,8 @@ Flightfinder::Application.routes.draw do
   get '/terms'    => 'high_voltage/pages#show', id: 'terms'
 
   get '/home', to: redirect('/')
-
+  scope :api do
+    resources :learninglogs
+  end
   root :to => 'high_voltage/pages#show', id: 'home'
 end
