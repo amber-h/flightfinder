@@ -4,9 +4,11 @@ Flightfinder::Application.routes.draw do
   get '/privacy'  => 'high_voltage/pages#show', id: 'privacy'
   get '/terms'    => 'high_voltage/pages#show', id: 'terms'
 
-  get '/home', to: redirect('/')
+  #get '/home', to: redirect('/')
   scope :api do
-    resources :learninglogs
+   # resources :learninglogs, defaults: {format: :json}
+    get "/learninglogs(.:format)" => "learninglogs#index"
+    get "/learninglogs/:id(.:format)" => "learninglogs#show"
   end
   root :to => 'high_voltage/pages#show', id: 'home'
 end

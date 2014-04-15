@@ -1,7 +1,6 @@
 class LearninglogsController < ApplicationController
 
   def index
-    byebug
     render json: Learninglog.all
   end
 
@@ -9,4 +8,7 @@ class LearninglogsController < ApplicationController
     render json: Learninglog.find(params[:id])
   end
 
+  def learninglog_params
+    params.require(:content)
+  end
 end
